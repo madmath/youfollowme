@@ -1,0 +1,14 @@
+This is the source for the Google App Engine application at http://www.youfollow.me
+
+This application was built by 
+
+Mathieu Perreault (mathieu.perreault@gmail.com)
+Marc Beaupre (marc.pn.beaupre@gmail.com)
+
+as part of a 2-day hackathon in October 2010.
+
+As such, this application is not tested and was coded hastily. Nevertheless, it works and the results can be observed on http://www.youfollow.me
+
+Some files were ommitted (such as library JARs) but README files were added to point where they should be added.
+
+We recommend not to directly copy this project since the App Engine structure may have changed since 2010, but it can serve as a good pointer as to the structure of an App Engine application.
