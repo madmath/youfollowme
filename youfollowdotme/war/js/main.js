@@ -1,3 +1,4 @@
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
 
 var pageShown;
 var linecount;

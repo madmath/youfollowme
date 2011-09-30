@@ -1,3 +1,5 @@
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
+
 package ca.mcgill.youfollowdotme;
 
 import java.io.IOException;

@@ -1,3 +1,5 @@
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
+
 package ca.mcgill.youfollowdotme;
 
 import java.io.IOException;
@@ -9,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,7 +21,8 @@ import com.google.appengine.api.users.UserServiceFactory;
 public class FetchDataServlet extends HttpServlet {
 
 private static final Logger log = Logger.getLogger(FetchDataServlet.class.getName());
-	
+
+	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		// Get User associated with the Google Account.
@@ -80,7 +82,7 @@ private static final Logger log = Logger.getLogger(FetchDataServlet.class.getNam
 			resp.getWriter().print("{'success':false}");
 			log.info("sending success false");
 		}
-		
-		
+
+
 	}
 }

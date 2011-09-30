@@ -1,7 +1,8 @@
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
+
 package ca.mcgill.youfollowdotme;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.logging.Logger;
 
 import javax.jdo.JDOObjectNotFoundException;
@@ -16,9 +17,10 @@ import com.google.appengine.api.users.UserServiceFactory;
 
 @SuppressWarnings("serial")
 public class CheckAvailServlet extends HttpServlet {
-	
+
 	private static final Logger log = Logger.getLogger(CheckAvailServlet.class.getName());
-	
+
+	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		// Get User associated with the Google Account.
@@ -60,5 +62,5 @@ public class CheckAvailServlet extends HttpServlet {
 			log.info("sending NOTAVAILABLE (empty or null username)");
 		}
 	}
-	
+
 }

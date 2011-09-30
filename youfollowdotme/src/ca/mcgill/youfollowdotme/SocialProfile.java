@@ -1,6 +1,6 @@
-package ca.mcgill.youfollowdotme;
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
 
-import com.google.appengine.api.users.User;
+package ca.mcgill.youfollowdotme;
 
 import java.util.Date;
 import java.util.List;
@@ -9,34 +9,36 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.google.appengine.api.users.User;
+
 @PersistenceCapable
 public class SocialProfile {
-	
+
 	@PrimaryKey
     @Persistent
     private String yfmUsername;
-    
+
     @Persistent
     private User author;
-    
+
     @Persistent
     private String description;
-    
+
     @Persistent
     private String fullName;
-    
+
     @Persistent
     private String title;
-    
+
     @Persistent
     private String phoneNumber;
-    
+
     @Persistent
     private String email;
-    
+
     @Persistent
     private String address;
-    
+
     @Persistent
     private List<SocialAccount> accounts;
 
@@ -133,13 +135,14 @@ public class SocialProfile {
 		this.address = address;
 	}
 
+	@Override
 	public String toString() {
 		StringBuffer accountsb = new StringBuffer();
 		for (SocialAccount a: this.getAccounts()) {
 			accountsb.append(a.toString() + "\n");
 		}
 		return "\nSocial Profile for username: " + this.getYfmUsername() + "\nAuthor: " + this.getAuthor().getNickname() + "\nFull Name: " +
-			this.getFullName() + "\nEmail: " + this.getEmail() + "\nDescription: " + 
+			this.getFullName() + "\nEmail: " + this.getEmail() + "\nDescription: " +
 			this.getDescription() + "\nPhone: " + this.getPhoneNumber() + "\nAddress: " +
 			this.getAddress() + ((accountsb.length() > 0) ? "\nAccounts: " + accountsb.toString() : "");
 	}

@@ -1,8 +1,6 @@
-package ca.mcgill.youfollowdotme;
+/* Copyright 2010 Mathieu Perreault and Marc Beaupre */
 
-import com.google.appengine.api.users.User;
-import com.google.appengine.api.users.UserService;
-import com.google.appengine.api.users.UserServiceFactory;
+package ca.mcgill.youfollowdotme;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,13 +9,20 @@ import java.util.logging.Logger;
 
 import javax.jdo.JDOObjectNotFoundException;
 import javax.jdo.PersistenceManager;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.appengine.api.users.User;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 
 @SuppressWarnings("serial")
 public class SaveSocialProfileServlet extends HttpServlet {
-	
+
 	private static final Logger log = Logger.getLogger(SaveSocialProfileServlet.class.getName());
-	
+
+	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		// Get User associated with the Google Account.
@@ -74,7 +79,7 @@ public class SaveSocialProfileServlet extends HttpServlet {
     			if (address != null && !address.equals("Address")) {
     				sp.setAddress(address);
     			}
-    			
+
     			// Get Accounts and if they are not null, add them to ArrayList.
     			ArrayList<SocialAccount> accounts = new ArrayList<SocialAccount>();
         		String[] accountsa = req.getParameterValues("accounts[]");
@@ -86,7 +91,7 @@ public class SaveSocialProfileServlet extends HttpServlet {
     					SocialAccount sa = new SocialAccount(currentAccount, currentServiceType);
     					// If there is a token here, do sa.setToken(token);
     					accounts.add(sa);
-    				} 
+    				}
     			}
     			sp.setAccounts(accounts);
     			// Save it to the database!
@@ -102,11 +107,11 @@ public class SaveSocialProfileServlet extends HttpServlet {
         } else {
         	log.info("Forbidden because user is logged out: " + user);
             resp.setStatus(HttpServletResponse.SC_FORBIDDEN);
-        }	
+        }
 	}
-	
+
 	public static boolean isNullOrBlank(String param) {
 		return param == null || param.trim().length() == 0;
 	}
-	
+
 }
