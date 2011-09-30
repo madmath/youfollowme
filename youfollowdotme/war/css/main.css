@@ -1,0 +1,142 @@
+#yfmheader {
+	height: 150px;
+}
+#yfmheadershow {
+    height: 60px;
+}
+
+#yfmh1 {
+	font-family: 'Molengo', arial, serif;
+	font-size: 72px;
+}
+
+h3 {
+	font-family: 'Molengo', arial, serif;
+	font-size: 36px;
+}
+
+#followmelink {
+    font-family: 'Molengo', arial, serif;
+    font-size: 30px;
+}
+
+input#usernameInput {
+	height: 100px;
+	width: 450px;
+	vertical-align: -1%;
+	font-family: 'Molengo', arial, serif;
+	font-size: 72px;
+	border: 1px solid #66ccdd;
+}
+
+.secondaryInputs input {
+	height: 30px;
+	color: grey;
+	#font-family: 'Molengo', arial, serif;
+	font-size: 16px;
+}
+
+#descriptionInput {
+	width: 195px;
+	color: grey;
+	font-family: 'Molengo', arial, serif;
+	font-size: 12px;
+}
+
+.socialcontainer {
+	align: center;
+}
+
+.socialpost
+{
+  /*padding: 10px;
+  height: 48px;
+  background-color: #ffffff;
+  margin: 20px 0 20px 0;
+  color: #164b67;*/
+  font-size: 14px;
+  font-family: 'Molengo', arial, serif;
+  /*background-color:#b7dff3;*/
+}
+
+#text
+{
+margin-left: 55px;
+}
+#profile_image
+{
+vertical-align: middle;
+float: left;
+}
+
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.orange {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+
+#userfield {
+	vertical-align: -1%;
+	font-family: 'Molengo', arial, serif;
+	font-size: 72px;
+	color: blue;
+}
+
+.qrcode {
+    align: center;
+}
+
+#socialaccountsheader {
+	padding-top: 55px;
+}	
+
+#socialaccountsheader {
+	padding-top: 55px;
+}
+
+.inset {
+    vertical-align: 100%;
+}
+
+#logo {
+	/*position: absolute; top: 200px; left: 80px;*/
+}
+
+#backgroundimg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:-1;
+}
+
+#attribution {
+    float: right;
+}
