@@ -51,10 +51,6 @@ public class SocialProfile {
         this.date = date;
     }
 
-//    public Key getKey() {
-//        return key;
-//    }
-
     public User getAuthor() {
         return author;
     }
